@@ -28,7 +28,7 @@ a {
 }
 h1:hover,
 a:hover {
-    text-shadow: -2px 3px 4px green; /* Efecto hover para títulos y enlaces */
+    color: greenyellow;
 }
 
 /* Menú de navegación */
@@ -43,6 +43,7 @@ nav {
     padding: 0 20px;
     position: relative;
     gap: 20px;
+    z-index: 1002;
 }
 
 .logo_nav {
@@ -76,10 +77,11 @@ nav::after {
     right: 0;
     height: 1px;
     background-color: white; /* Color de la línea */
+    z-index: 1001;
 }
 
 nav:hover {
-    box-shadow: 0 4px 10px rgba(0, 255, 0, 0.8); /* Efecto hover para el navbar */
+    box-shadow: 0 4px 10px rgb(115, 187, 6); /* Efecto hover para el navbar */
 }
 
 /* Estilos responsivos para pantallas pequeñas */
@@ -93,7 +95,7 @@ nav:hover {
         width: 100%; /* Ocupa todo el ancho */
         flex-direction: column; /* Enlaces en columna */
         position: absolute; /* Posiciona debajo del navbar */
-        top: 60px; /* Espacio respecto al navbar */
+        top: 70px; /* Espacio respecto al navbar */
         left: 0;
         z-index: 1000; /* Asegura que el menú esté por encima */
         padding: 10px 0; /* Espaciado vertical */
@@ -105,13 +107,15 @@ nav:hover {
         padding: 10px 20px; /* Espaciado alrededor del botón */
         justify-content: flex-start; /* Alinea a la izquierda */
         align-items: center; /* Centra verticalmente */
-        z-index: 1001; /* Asegura que esté por encima del menú */
+        z-index: 1003; /* Asegura que esté por encima del menú */
     }
 
     a {
+        border-bottom: 1px solid rgb(255, 255, 255); /* Puedes cambiar el grosor y el color */
         width: 100%; /* Ocupan todo el ancho */
         text-align: center; /* Centra el texto */
         padding: 10px 0; /* Espaciado alrededor */
+
     }
 
     .menu.active {
