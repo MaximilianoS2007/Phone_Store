@@ -1,12 +1,15 @@
 /* Fuente personalizada desde Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 
 /* Estilos generales */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: "Zen Dots", sans-serif;
+    font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1.3em;
 }
 
 body {
@@ -41,8 +44,8 @@ a {
 
 h1:hover,
 a:hover {
-    color: greenyellow;
-    text-decoration: underline rgb(165, 253, 64);
+    color: rgb(255, 255, 255);
+    text-decoration: underline rgb(128, 0, 255);
 }
 
 /* Menú de navegación */
@@ -51,7 +54,6 @@ nav {
     height: 60px;
     display: flex;
     align-items: center;
-
     background-color: black;
     box-shadow: 0 0 0 rgba(0, 255, 0, 0);
     transition: box-shadow 2s ease, padding 0.8s ease;
@@ -71,6 +73,7 @@ nav {
 }
 
 .menu {
+    padding-right: 7%;
     display: flex; /* Muestra los elementos en fila */
     justify-content: center; /* Centra los elementos */
     gap: 20px; /* Espacio entre enlaces */
@@ -91,13 +94,13 @@ nav::after {
     bottom: 0;
     left: 0;
     right: 0;
-    height: 1px;
-    background-color: white; /* Color de la línea */
+    height: 2px;
+    background-color: rgb(128, 0, 255); /* Color de la línea */
     z-index: 1001; /*son para decir quien va primero*/
 }
 
 nav:hover {
-    box-shadow: 0 4px 10px rgb(115, 187, 6); /* Efecto hover para el navbar */
+    box-shadow: 0 4px 10px rgb(128, 0, 255); /* Efecto hover para el navbar */
 }
 
 h2{
@@ -106,6 +109,10 @@ h2{
     font-size: 1rem;
     padding: 10px;
     cursor: pointer; /* Añadido cursor de puntero */
+}
+
+.desplegable{
+    color: rgb(128, 0, 255);
 }
 
 p {
@@ -132,25 +139,25 @@ p {
 }
 
 #enlace_clientes:hover {
-    color:rgb(115, 187, 6); /* Cambio de color al pasar el mouse */
+    color:rgb(128, 0, 255); /* Cambio de color al pasar el mouse */
 }
 
 summary {
+    text-decoration: underline;
+    text-decoration-color: transparent;
     justify-content: center;
     align-items: center;
-    text-decoration: none;
     color: rgb(255, 255, 255);
     font-size: 1rem;
     padding: 10px 0; /* espacio entre el sumary y el subrayado*/
     cursor: pointer;
     display: flex; /* el elemento se pone al centro*/
-    text-align: center; /* Centra el texto */
-    border-bottom: 1px solid transparent; /* Línea invisible por defecto esto sirve para que haga la transicion */
-    transition: border-bottom 0.5s ease, transform 0.5s ease; /* Transiciones suaves de entrada y de salida*/
+    text-align: center; /* Centra el texto */ 
+    transition: border-bottom 0.3s ease, transform 0.3s ease; /* Transiciones suaves de entrada y de salida*/
 }
 
 summary:hover {
-    border-bottom: 1px solid #ffffff; /* Se muestra la línea al pasar el ratón */
+    text-decoration-color: rgb(128, 0, 255);
     transform: scaleX(1.1); /* Efecto de agrandamiento en el eje X  para sentir que se esta pasando por el*/
 }
 
@@ -158,15 +165,6 @@ summary:hover {
 summary:focus, summary:active {
     transform: scaleX(1.1); /* Mantiene el efecto de agrandamiento */
 }
-
-/* detecta si el details del sumarry correspondiente esta activo*/
-details[open] summary {
-    border-bottom: 1px solid #ffffff; /*linea siempre activo */
-}
-
-
-
-
 
 /* Estilos responsivos para pantallas pequeñas */
 @media (max-width: 768px) {
@@ -194,7 +192,7 @@ details[open] summary {
         z-index: 1003; /* Asegura que esté por encima del menú */
     }
 
-    a {
+    .opc {
         border-bottom: 1px solid rgb(255, 255, 255); /* Puedes cambiar el grosor y el color */
         width: 100%; /* Ocupan todo el ancho */
         text-align: center; /* Centra el texto */
