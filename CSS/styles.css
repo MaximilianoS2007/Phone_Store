@@ -9,7 +9,8 @@
     margin: 0;
     padding: 0;
     font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 1.3em;
+    font-weight: bold;
+    font-size: 1.4em;
 }
 
 body {
@@ -20,6 +21,10 @@ body {
 .white {
     color: rgb(255, 255, 255);
     font-size: 1.5rem;
+}
+
+.manzana{
+    font-size: 1.2rem;
 }
 
 h1{
@@ -45,7 +50,7 @@ a {
 h1:hover,
 a:hover {
     color: rgb(255, 255, 255);
-    text-decoration: underline rgb(128, 0, 255);
+    text-decoration: underline rgb(60, 255, 0);
 }
 
 /* Menú de navegación */
@@ -67,7 +72,7 @@ nav {
     text-decoration: none;
     color: rgb(255, 255, 255);
     font-size: 1rem;
-    display: flex;
+    display: grid;
     align-items: center;
 
 }
@@ -106,9 +111,10 @@ nav:hover {
 h2{
     text-decoration: none;
     color: rgb(255, 255, 255);
-    font-size: 1rem;
+    font-size: 1.3rem;
     padding: 10px;
     cursor: pointer; /* Añadido cursor de puntero */
+    justify-content: center;
 }
 
 .desplegable{
@@ -143,6 +149,7 @@ p {
 }
 
 summary {
+    width: auto;
     text-decoration: underline;
     text-decoration-color: transparent;
     justify-content: center;
@@ -153,21 +160,22 @@ summary {
     cursor: pointer;
     display: flex; /* el elemento se pone al centro*/
     text-align: center; /* Centra el texto */ 
+    transform: scaleX(0.9);
     transition: border-bottom 0.3s ease, transform 0.3s ease; /* Transiciones suaves de entrada y de salida*/
 }
 
 summary:hover {
     text-decoration-color: rgb(128, 0, 255);
-    transform: scaleX(1.1); /* Efecto de agrandamiento en el eje X  para sentir que se esta pasando por el*/
+    transform: scaleX(1); /* Efecto de agrandamiento en el eje X  para sentir que se esta pasando por el*/
 }
 
 /* Cuando se hace clic o se mantiene el foco */
 summary:focus, summary:active {
-    transform: scaleX(1.1); /* Mantiene el efecto de agrandamiento */
+    transform: scaleX(1); /* Mantiene el efecto de agrandamiento */
 }
 
 /* Estilos responsivos para pantallas pequeñas */
-@media (max-width: 768px) {
+@media (max-width: 930px) {
     nav {
         justify-content: space-between; /* Alinea logo y menú hamburguesa */
     }
