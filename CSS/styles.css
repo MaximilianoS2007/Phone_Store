@@ -44,13 +44,14 @@ a {
     font-size: 1rem;
     padding: 10px;
     cursor: pointer; /* Añadido cursor de puntero */
-    transition: 1s;
+    transition: 0.3s;
+    text-decoration: underline transparent;
 }
 
 h1:hover,
 a:hover {
     color: rgb(255, 255, 255);
-    text-decoration: underline rgb(60, 255, 0);
+    text-decoration: underline rgb(255, 7, 58)
 }
 
 /* Menú de navegación */
@@ -97,12 +98,12 @@ nav::after {
     left: 0;
     right: 0;
     height: 2px;
-    background-color: rgba(57, 255, 20, 1); /* Color de la línea */
+    background-color: rgba(255, 7, 58, 0.8); /* Color de la línea */
     z-index: 1001; /*son para decir quien va primero*/
 }
 
 nav:hover {
-    box-shadow: 0 4px 10px rgba(57, 255, 20, 1); /* Efecto hover para el navbar */
+    box-shadow: 0 5px 10px rgba(255, 7, 58, 0.8); /* Efecto hover para el navbar */
 }
 
 h2{
@@ -115,7 +116,7 @@ h2{
 }
 
 .desplegable{
-    color: rgba(57, 255, 20, 1);
+    color: rgb(255, 255, 255);
 }
 
 p {
@@ -137,12 +138,13 @@ p {
     font-size: 1rem;
     padding: 10px;
     cursor: pointer;
-    transition: color 0.5s;
+    transition: color 0.5s, text-decoration-color 0.5s; /* Añadido para la transición del color del subrayado */
     text-decoration: underline;
+    text-decoration-color:transparent; /* Color original del subrayado */
 }
 
 #enlace_clientes:hover {
-    color:rgba(57, 255, 20, 1); /* Cambio de color al pasar el mouse */
+    text-decoration-color: rgba(255, 7, 58, 0.8); /* Cambio de color del subrayado al pasar el mouse */
 }
 
 summary {
@@ -162,7 +164,7 @@ summary {
 }
 
 summary:hover {
-    text-decoration-color: rgba(57, 255, 20, 1);
+    text-decoration-color: rgba(255, 7, 58, 0.8);
     transform: scaleX(1); /* Efecto de agrandamiento en el eje X  para sentir que se esta pasando por el*/
 }
 
@@ -175,6 +177,8 @@ summary:focus, summary:active {
 @media (max-width: 768px) {
     nav {
         justify-content: space-between; /* Alinea logo y menú hamburguesa */
+        box-shadow: 0 5px 10px rgba(255, 7, 58, 0.8);
+    }
     }
 
     .menu {
@@ -202,7 +206,12 @@ summary:focus, summary:active {
         width: 100%; /* Ocupan todo el ancho */
         text-align: center; /* Centra el texto */
         padding: 10px 0; /* Espaciado alrededor */
+        transition: box-shadow 0.7s ease, padding 0.8s ease;
 
+    }
+
+    .opc:hover{
+        box-shadow: 0 5px 10px rgba(255, 7, 58, 0.8);
     }
 
     .menu.active {
@@ -210,10 +219,9 @@ summary:focus, summary:active {
     }
 
     .logo_nav {
-        padding-left: 75px;
+        padding-left: 85px;
         width: 100%;
         display: flex;
         align-items: center;
-        justify-content: center;
-    }
+        justify-content: center;   
 }
