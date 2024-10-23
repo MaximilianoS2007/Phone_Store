@@ -69,12 +69,9 @@ nav {
 }
 
 .logo_nav {
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    font-size: 1rem;
-    display: grid;
+    display: flex;
     align-items: center;
-
+    justify-content: center;
 }
 
 .menu {
@@ -175,7 +172,7 @@ summary:focus, summary:active {
 }
 
 /* Estilos responsivos para pantallas pequeñas */
-@media (max-width: 930px) {
+@media (max-width: 768px) {
     nav {
         justify-content: space-between; /* Alinea logo y menú hamburguesa */
     }
@@ -210,5 +207,13 @@ summary:focus, summary:active {
 
     .menu.active {
         display: flex; /* Muestra el menú cuando tiene la clase 'active' */
+    }
+
+    .logo_nav {
+        padding-left: 75px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
