@@ -100,12 +100,12 @@ nav::after {
     left: 0;
     right: 0;
     height: 2px;
-    background-color: rgb(128, 0, 255); /* Color de la línea */
+    background-color: rgba(57, 255, 20, 1); /* Color de la línea */
     z-index: 1001; /*son para decir quien va primero*/
 }
 
 nav:hover {
-    box-shadow: 0 4px 10px rgb(128, 0, 255); /* Efecto hover para el navbar */
+    box-shadow: 0 4px 10px rgba(57, 255, 20, 1); /* Efecto hover para el navbar */
 }
 
 h2{
@@ -118,7 +118,7 @@ h2{
 }
 
 .desplegable{
-    color: rgb(128, 0, 255);
+    color: rgba(57, 255, 20, 1);
 }
 
 p {
@@ -145,7 +145,7 @@ p {
 }
 
 #enlace_clientes:hover {
-    color:rgb(128, 0, 255); /* Cambio de color al pasar el mouse */
+    color:rgba(57, 255, 20, 1); /* Cambio de color al pasar el mouse */
 }
 
 summary {
@@ -165,7 +165,7 @@ summary {
 }
 
 summary:hover {
-    text-decoration-color: rgb(128, 0, 255);
+    text-decoration-color: rgba(57, 255, 20, 1);
     transform: scaleX(1); /* Efecto de agrandamiento en el eje X  para sentir que se esta pasando por el*/
 }
 
