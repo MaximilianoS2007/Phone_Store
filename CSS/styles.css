@@ -14,7 +14,7 @@
 }
 
 body {
-    background-color: black;
+    background-color: rgb(255, 255, 255);
 }
 
 /* Estilos para texto */
@@ -41,7 +41,7 @@ h2{
 a {
     text-decoration: none;
     color: rgb(255, 255, 255);
-    font-size: 1rem;
+    font-size: 0.7rem;
     padding: 10px;
     cursor: pointer; /* Añadido cursor de puntero */
     transition: 0.3s;
@@ -61,7 +61,6 @@ nav {
     display: flex;
     align-items: center;
     background-color: black;
-    box-shadow: 0 0 0 rgba(0, 255, 0, 0);
     transition: box-shadow 2s ease, padding 0.8s ease;
     padding: 0 20px;
     position: relative;
@@ -94,35 +93,26 @@ nav {
 nav::after {
     content: "";
     position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background-color: rgba(255, 7, 58, 0.8); /* Color de la línea */
     z-index: 1001; /*son para decir quien va primero*/
-}
-
-nav:hover {
-    box-shadow: 0 5px 10px rgba(255, 7, 58, 0.8); /* Efecto hover para el navbar */
 }
 
 h2{
     text-decoration: none;
-    color: rgb(255, 255, 255);
-    font-size: 1.3rem;
+    color: rgb(0, 0, 0);
+    font-size: 0.9rem;
     padding: 10px;
     cursor: pointer; /* Añadido cursor de puntero */
     justify-content: center;
 }
 
 .desplegable{
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
 }
 
 p {
     text-decoration: none;
-    color: rgb(255, 255, 255);
-    font-size: 1rem;
+    color: rgb(0, 0, 0);
+    font-size: 0.6rem;
     padding: 10px;
     cursor: pointer; /* Añadido cursor de puntero */
     justify-content: center;
@@ -134,9 +124,8 @@ p {
 
 #enlace_clientes {
     text-decoration: none;
-    color: rgb(255, 255, 255);
-    font-size: 1rem;
-    padding: 10px;
+    color: rgb(0, 0, 0);
+    font-size: 0.65rem;
     cursor: pointer;
     transition: color 0.5s, text-decoration-color 0.5s; /* Añadido para la transición del color del subrayado */
     text-decoration: underline;
@@ -153,24 +142,56 @@ summary {
     text-decoration-color: transparent;
     justify-content: center;
     align-items: center;
-    color: rgb(255, 255, 255);
-    font-size: 1rem;
+    color: rgb(0, 0, 0);
+    font-size: 0.8rem;
     padding: 10px 0; /* espacio entre el sumary y el subrayado*/
     cursor: pointer;
     display: flex; /* el elemento se pone al centro*/
     text-align: center; /* Centra el texto */ 
-    transform: scaleX(0.9);
-    transition: border-bottom 0.3s ease, transform 0.3s ease; /* Transiciones suaves de entrada y de salida*/
+    text-decoration: underline transparent;
+    transition: 0.6s;
 }
 
 summary:hover {
     text-decoration-color: rgba(255, 7, 58, 0.8);
-    transform: scaleX(1); /* Efecto de agrandamiento en el eje X  para sentir que se esta pasando por el*/
 }
 
-/* Cuando se hace clic o se mantiene el foco */
-summary:focus, summary:active {
-    transform: scaleX(1); /* Mantiene el efecto de agrandamiento */
+/* Fondo de la sección */
+.fundamentos {
+    background-color: #e0e0e0; /* Fondo gris claro */
+    padding: 20px;
+    display: flex;
+    justify-content: center; /* Centra los elementos horizontalmente */
+}
+
+/* Estilos para el contenedor de los ítems */
+.box_fundamentos {
+    display: flex;
+    flex-direction: row; /* Coloca los ítems en una fila */
+    gap: 50px; /* Espacio entre cada ítem */
+    align-items: center; /* Alinea verticalmente los ítems */
+}
+
+/* Estilos para los ítems individuales */
+.item {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column; /* Mantener ícono y texto en columna */
+    align-items: center; /* Centrados horizontalmente */
+    text-align: center;
+}
+
+/* Estilo para los íconos */
+.custom-icon {
+    color: black; /* Icono en negro */
+    font-size: 48px; /* Tamaño del icono */
+    margin-bottom: 10px; /* Espacio entre el ícono y el texto */
+}
+
+/* Estilo para el texto */
+.item span {
+    font-size: 12px;
+    color: black;
 }
 h3{
     text-decoration: none;
@@ -213,12 +234,19 @@ h3{
         justify-content: space-between; /* Alinea logo y menú hamburguesa */
     }
 
+    nav::after{
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background-color: rgba(255, 7, 58, 0.8); /* Color de la línea */
+    }
     .menu {
         display: none; /* Oculto por defecto */
         width: 100%; /* Ocupa todo el ancho */
         flex-direction: column; /* Enlaces en columna */
         position: absolute; /* Posiciona debajo del navbar */
-        top: 70px; /* Espacio respecto al navbar */
+        top: 60px; /* Espacio respecto al navbar */
         left: 0;
         z-index: 1000; /* Asegura que el menú esté por encima */
         padding: 10px 0; /* Espaciado vertical */
@@ -237,13 +265,6 @@ h3{
         border-bottom: 1px solid rgb(255, 255, 255); /* Puedes cambiar el grosor y el color */
         width: 100%; /* Ocupan todo el ancho */
         text-align: center; /* Centra el texto */
-        padding: 10px 0; /* Espaciado alrededor */
-        transition: box-shadow 0.7s ease, padding 0.8s ease;
-
-    }
-
-    .opc:hover{
-        box-shadow: 0 5px 10px rgba(255, 7, 58, 0.8);
     }
 
     .menu.active {
@@ -255,6 +276,37 @@ h3{
         width: 100%;
         display: flex;
         align-items: center;
-        justify-content: center;   
+        justify-content: center; 
+
 }
+
+    h1,h2{
+        font-size: 20px;
+    }
+
+    #enlace_clientes{
+        font-size: 12px;
+    }
+    p {
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+        font-size: 12px;
+        padding: 10px;
+        cursor: pointer; /* Añadido cursor de puntero */
+        justify-content: center;
+        align-items: center;
+        max-width: 600px; /* Limita el ancho máximo de la caja */
+        margin: 20px auto; /* Centra la caja en la página */
+        text-align: center; /* Centra el texto horizontalmente */
+    }
+
+    summary{
+        font-size: 14px;
+    }
+
+    .custom-icon {
+        color: black; /* Icono en negro */
+        font-size: 36px; /* Tamaño del icono */
+        margin-bottom: 10px; /* Espacio entre el ícono y el texto */
+    }
 }
