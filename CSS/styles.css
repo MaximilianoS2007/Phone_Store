@@ -42,7 +42,6 @@ a {
     text-decoration: none;
     color: rgb(255, 255, 255);
     font-size: 0.7rem;
-    padding: 10px;
     cursor: pointer; /* Añadido cursor de puntero */
     transition: 0.3s;
     text-decoration: underline transparent;
@@ -195,7 +194,7 @@ summary:hover {
 }
 h3{
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     font-size: 1.3rem;
     padding: 10px;
     cursor: pointer; /* Añadido cursor de puntero */
@@ -207,8 +206,8 @@ h3{
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-color: black;
-    color: white;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     font-family: Arial, sans-serif;
     height: auto;
     margin: 0;
@@ -265,6 +264,7 @@ h3{
         border-bottom: 1px solid rgb(255, 255, 255); /* Puedes cambiar el grosor y el color */
         width: 100%; /* Ocupan todo el ancho */
         text-align: center; /* Centra el texto */
+        padding: 10px;
     }
 
     .menu.active {
