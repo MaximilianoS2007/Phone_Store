@@ -272,4 +272,15 @@ summary:hover {
     summary{
         font-size: 14px;
     }
+
+    .item span {
+        font-size: 10px;
+        color: black;
+    }
+
+    .custom-icon {
+        color: black; /* Icono en negro */
+        font-size: 36px; /* Tamaño del icono */
+        margin-bottom: 10px; /* Espacio entre el ícono y el texto */
+    }
 }
