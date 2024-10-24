@@ -172,6 +172,40 @@ summary:hover {
 summary:focus, summary:active {
     transform: scaleX(1); /* Mantiene el efecto de agrandamiento */
 }
+h3{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 1.3rem;
+    padding: 10px;
+    cursor: pointer; /* Añadido cursor de puntero */
+    justify-content: center;   
+}
+.creator-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    height: auto;
+    margin: 0;
+}
+.creator-info {
+    max-width: auto;
+}
+.creator-info img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.creator-info img:hover {
+    transform: scale(1.1); /* Aumenta el tamaño al pasar el ratón */
+    opacity: 0.8; /* Cambia la opacidad al pasar el ratón */
+}
 
 /* Estilos responsivos para pantallas pequeñas */
 @media (max-width: 768px) {
