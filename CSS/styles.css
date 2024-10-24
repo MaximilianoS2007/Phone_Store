@@ -181,9 +181,6 @@ summary:hover {
     text-align: center;
 }
 
-.paddi{
-    padding-top: 25px;
-}
 /* Estilo para los íconos */
 .custom-icon {
     color: black; /* Icono en negro */
@@ -271,11 +268,6 @@ summary:hover {
 
     summary{
         font-size: 14px;
-    }
-
-    .item span {
-        font-size: 10px;
-        color: black;
     }
 
     .custom-icon {
